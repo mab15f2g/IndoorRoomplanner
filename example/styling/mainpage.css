@@ -1,0 +1,131 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+
+
+/* Zoom grid  */
+.axis path {
+    display: none;
+  }
+  
+  .axis line {
+    stroke-opacity: 0.1;
+    shape-rendering: crispEdges;
+  }
+  
+  .view {
+    fill: url(#gradient);
+    stroke: #000;
+  }
+
+
+/* The sidebar menu */
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 165px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: 	#D3D3D3; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+/* The navigation menu left */
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+/* When you mouse over the navigation left, change their color */
+.sidenav a:hover {
+    color: rgb(143, 8, 8)
+}
+
+.sidemenubutton {
+    font-family: "Roboto medium", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    display: block;
+    border:0;
+    border-radius: 3px;
+    background: #0b76cc;
+
+
+
+
+}
+.sidemenubutton span{
+    vertical-align: 5px;
+    color: #ffff;
+}
+
+.sidemenubutton img {
+    height: 25px;
+    width: 25px;
+    vertical-align: -3px;
+}
+
+.sidemenubuttonbuttom {
+    font-family: "Roboto medium", sans-serif;
+    font-size: 12px;
+    text-align: left;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5px;
+    display: block;
+    border:0;
+    border-radius: 3px;
+    background: #0b76cc;
+
+
+
+
+}
+.sidemenubuttonbuttom span{
+    vertical-align: 5px;
+    color: #ffff;
+}
+
+.sidemenubuttonbuttom img {
+    height: 25px;
+    width: 25px;
+    vertical-align: -3px;
+}
+
+
+
+
+
+
+/*
+   *********************Style page content******************************
+*/
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
