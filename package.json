@@ -1,5 +1,5 @@
 {
-  "name": "d3.v4.floorplan",
+  "name": "d3.floorplan",
   "version": "0.0.1",
   "description": "A map-like interactive set of [reusable charts](http://bost.ocks.org/mike/chart/) for layering visualizations on a common local coordinate system like floor plans.",
   "main": "index.js",

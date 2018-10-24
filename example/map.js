@@ -238,7 +238,7 @@ map.zonePolygons(svg, mapdata.floors[0].zones);
 */
 
 
-//  freehand Draw function
+//  Freehand Draw function
 var drawZone = d3.select('#poly').on('click', function () {
     var zonePolyPoints = [];
     var zone = {
@@ -268,11 +268,6 @@ var drawSensor = d3.select('#sensor').on('click', function () {
     new map.sensorImageLayer(svg, mapdata.floors[0], sensor);
 });
 
-// Draw Wall function
-
-var drawWall = d3.select('#wall').on('click', function () {
-    
-});
 
 
 // Draw Shelf function
@@ -368,7 +363,7 @@ function uuid() {
 /*
 ***********************************Update Map**********************************
 */
-var updateMapData = d3.select('#test').on('click', function () {
+var updateMapData = d3.select('#updateMapData').on('click', function () {
 
 
     var y = document.getElementsByClassName("svg")
@@ -420,9 +415,39 @@ function zoom_actions() {
 zoom_handler(svg);
 */
 
+/*
+***********************************FILE UPLOAD**********************************
+*/
 
 
+var fileupload(evt) = d3.select('#upload').on('click', function (){
+    var dateien = evt.target.files; // FileList objekt
 
+    // erste Datei auswählen (wichtig, weil IMMER ein FileList Objekt generiert wird)
+    var uploadDatei = dateien[0];
+
+    // Ein Objekt um Dateien einzulesen
+    var reader = new FileReader();
+
+    var senddata = new Object();
+    // Auslesen der Datei-Metadaten
+    senddata.name = uploadDatei.name;
+    senddata.date = uploadDatei.lastModified;
+    senddata.size = uploadDatei.size;
+    senddata.type = uploadDatei.type;
+
+    // Wenn der Dateiinhalt ausgelesen wurde...
+    reader.onload = function(theFileData) {
+      senddata.fileData = theFileData.target.result; // Ergebnis vom FileReader auslesen
+
+      /*
+      Code für AJAX-Request hier einfügen
+      */
+    }
+
+    // Die Datei einlesen und in eine Data-URL konvertieren
+    reader.readAsDataURL(uploadDatei);
+  }
 
 
 
