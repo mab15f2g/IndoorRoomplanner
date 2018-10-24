@@ -114,6 +114,32 @@
 
 
 
+/* ***************** */
+/* The upper menu */
+/* ***************** */
+
+
+.upmenu{
+
+    height: 50;
+    margin-left: 150px;
+    background: #D3D3D3;
+
+}
+.floorbutton{
+    margin-left: 650px;
+    margin-top: -8px;
+   
+}
+
+
+
+
+.upmenubuttonbuttom img {
+    height: 25px;
+    width: 25px;
+    vertical-align: -3px;
+}
 
 
 

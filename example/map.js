@@ -2,11 +2,12 @@
 ****************************************Initial Parameters **************************
 */
 /* 
+*/
 var svg = d3.select("#mapfield").call(d3.zoom().on("zoom", function () {
    svg.attr("transform", d3.event.transform)})).append("g"),
 
   
-*/
+
 
 
 
@@ -31,10 +32,11 @@ var mapdata =
                 id: "94325",
                 name: "Floor 1",
                 image: {
+                    url: "images/sample_floorplan.png",
                     x: 0,
                     y: 0,
-                    w: 960,
-                    h: 500
+                    w: 1062,
+                    h: 720
                 },
                 zones: [
                     {
@@ -418,38 +420,6 @@ zoom_handler(svg);
 /*
 ***********************************FILE UPLOAD**********************************
 */
-
-
-var fileupload(evt) = d3.select('#upload').on('click', function (){
-    var dateien = evt.target.files; // FileList objekt
-
-    // erste Datei auswählen (wichtig, weil IMMER ein FileList Objekt generiert wird)
-    var uploadDatei = dateien[0];
-
-    // Ein Objekt um Dateien einzulesen
-    var reader = new FileReader();
-
-    var senddata = new Object();
-    // Auslesen der Datei-Metadaten
-    senddata.name = uploadDatei.name;
-    senddata.date = uploadDatei.lastModified;
-    senddata.size = uploadDatei.size;
-    senddata.type = uploadDatei.type;
-
-    // Wenn der Dateiinhalt ausgelesen wurde...
-    reader.onload = function(theFileData) {
-      senddata.fileData = theFileData.target.result; // Ergebnis vom FileReader auslesen
-
-      /*
-      Code für AJAX-Request hier einfügen
-      */
-    }
-
-    // Die Datei einlesen und in eine Data-URL konvertieren
-    reader.readAsDataURL(uploadDatei);
-  }
-
-
 
 
 
