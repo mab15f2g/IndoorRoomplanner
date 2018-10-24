@@ -34,9 +34,9 @@ var mapdata =
                 name: "Floor 1",
                 image: {
                     url: "images/sample_floorplan.png",
-                    x: 0,
-                    y: 0,
-                    w: 1062,
+                    x: -100,
+                    y: -100,
+                    w: 1162,
                     h: 720
                 },
                 zones: [
@@ -401,11 +401,12 @@ var x_axis = d3.axisBottom()
 // Add scales to y_axis
 var y_axis = d3.axisLeft()
     .scale(yscale);
-
+/*
 svg.append("g")
     .call(x_axis);
-
-
+svg.append("g")
+    .call(y_axis);
+*/
 /*
 var zoom_handler = d3.zoom()
     .on("zoom", zoom_actions);
