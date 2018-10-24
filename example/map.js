@@ -2,16 +2,17 @@
 ****************************************Initial Parameters **************************
 */
 /* 
-*/
+
 var svg = d3.select("#mapfield").call(d3.zoom().on("zoom", function () {
    svg.attr("transform", d3.event.transform)})).append("g"),
-
+*/
   
 
 
 
 
-var svg = d3.select("#mapfield"),
+var svg = d3.select("#mapfield").call(d3.zoom().on("zoom", function () {
+    svg.attr("transform", d3.event.transform)})).append("g"),
 
 
     width = +svg.attr("width"),
